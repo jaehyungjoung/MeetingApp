@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    >
+
+    <ImageView
+        android:paddingTop="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/registration_main"
+        android:layout_weight="7"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_marginBottom="15dp"
+        >
+        
+        <RelativeLayout
+            android:id="@+id/rl_register_kakao"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/btn_register_kakao"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@mipmap/ic_kakao"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="카카오톡으로 시작하기"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_register_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/btn_register_facebook"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:clickable="true"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@mipmap/ic_facebook"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="페이스북으로 시작하기"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_register_google"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/btn_register_google"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:clickable="true"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@mipmap/ic_google"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="구글로 시작하기"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
