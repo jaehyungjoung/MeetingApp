@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "767503800424",
+    "firebase_url": "https://meeting-fae0e.firebaseio.com",
+    "project_id": "meeting-fae0e",
+    "storage_bucket": "meeting-fae0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767503800424:android:ce93ad9f4a345d2e4d43dd",
+        "android_client_info": {
+          "package_name": "com.example.meetingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767503800424-59b8gocjg57ao3apql5h67meku7mfvp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCooOTNOwr6AJkMW0xXjeJq5SHTzRDDRc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767503800424-59b8gocjg57ao3apql5h67meku7mfvp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
