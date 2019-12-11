@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private SignInButton btn_google;
     private FirebaseAuth auth;
     private GoogleApiClient googleApiClient;
-    private static final int REQ_SIGN_GOOGLE = 100;
+    private static final int REQ_SIGN_GOOGLE = 100; //google login request code
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,14 +63,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {   //구글 로그인 인증 요청 했을때 결과값 되돌려 받는곳
         super.onActivityResult(requestCode, resultCode, data);
 
 
         if(requestCode == REQ_SIGN_GOOGLE) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             if(result.isSuccess()) {
-                GoogleSignInAccount account = result.getSignInAccount();
+                GoogleSignInAccount account = result.getSignInAccount();    //account 에 구글로그인 정보 담김
                 resultLogin(account);
             }
         }
@@ -85,8 +85,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         if(task.isSuccessful()) {
                             Toast.makeText(MainActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                            intent.putExtra("nickname", account.getDisplayName());
-                            intent.putExtra("photourl", String.valueOf(account.getPhotoUrl()));  //String.valueOf() 특정 자료형을 String 형태로 변환
                             startActivity(intent);
                         } else {
                             Toast.makeText(MainActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
