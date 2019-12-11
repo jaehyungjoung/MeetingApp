@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultActivity"
+    tools:context=".PersonalInformation"
     android:orientation="vertical"
     >
     <ScrollView
@@ -39,13 +39,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <EditText
-                        android:id="@+id/nickname_ins"
+                        android:id="@+id/nickname"
                         android:hint="닉네임"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         />
                     <EditText
-                        android:id="@+id/age_ins"
+                        android:id="@+id/age"
                         android:hint="나이"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -55,12 +55,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <EditText
-                        android:id="@+id/university_ins"
+                        android:id="@+id/university"
                         android:hint="학교"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:id="@+id/major_ins"
+                        android:id="@+id/major"
                         android:hint="학과"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -201,6 +201,11 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+            <Button
+                android:id="@+id/to_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="채팅으로(임시)"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
