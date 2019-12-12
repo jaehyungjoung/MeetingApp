@@ -26,7 +26,7 @@ public class ChatActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ChatAdapter mainAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private String nick = "nick임시";
+    private String nick;
 
     private EditText EditText_chat;
     private Button Button_send;
@@ -35,6 +35,8 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+
+
 
         Button_send = findViewById(R.id.Button_send);
         EditText_chat = findViewById(R.id.EditText_chat);
@@ -69,7 +71,7 @@ public class ChatActivity extends AppCompatActivity {
 
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = database.getReference();
+        myRef = database.getReference("chat");
 
 
 
