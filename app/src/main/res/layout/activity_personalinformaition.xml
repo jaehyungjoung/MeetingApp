@@ -206,6 +206,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="채팅으로(임시)"/>
+            <Button
+                android:id="@+id/enter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="정보입력(임시)"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

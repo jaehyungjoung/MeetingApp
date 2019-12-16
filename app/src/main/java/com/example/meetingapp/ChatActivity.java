@@ -16,6 +16,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,18 +27,25 @@ public class ChatActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ChatAdapter mainAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private String nick = "nick임시";
+    private String nick = "임시";
 
     private EditText EditText_chat;
     private Button Button_send;
     private DatabaseReference myRef;
+    private DatabaseReference uinf;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+
+
         Button_send = findViewById(R.id.Button_send);
         EditText_chat = findViewById(R.id.EditText_chat);
+
+
+
 
         Button_send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,8 +77,8 @@ public class ChatActivity extends AppCompatActivity {
 
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = database.getReference();
-
+        myRef = database.getReference("chat");
+        uinf = database.getReference("User-info");
 
 
         myRef.addChildEventListener(new ChildEventListener() {
